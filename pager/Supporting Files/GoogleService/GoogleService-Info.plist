@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>607797427886-vubmkv5l26mr1mi6pehqflkn1ng6h0bp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.607797427886-vubmkv5l26mr1mi6pehqflkn1ng6h0bp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC3V3C6JdKSZakIAghBqqRFBjinMAMDU7Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>607797427886</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.redmadrobot.watcher</string>
+	<key>PROJECT_ID</key>
+	<string>rmr-watcher</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rmr-watcher.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:607797427886:ios:1bdcd0a9730967e4e6f73f</string>
+	<key>DATABASE_URL</key>
+	<string>https://rmr-watcher.firebaseio.com</string>
+</dict>
+</plist>

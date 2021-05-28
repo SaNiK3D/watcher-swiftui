@@ -19,13 +19,13 @@ struct RoundedCorner: Shape {
 }
 
 extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner, fillColor: Color) -> some View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner = .allCorners, fillColor: Color = .clear, strokeColor: Color = .separator) -> some View {
         background(
             ZStack {
                 RoundedCorner(radius: radius, corners: corners)
                     .fill(fillColor)
                 RoundedCorner(radius: radius, corners: corners)
-                    .stroke(Color.separator, lineWidth: 1)
+                    .stroke(strokeColor, lineWidth: 1)
             }
         )
     }

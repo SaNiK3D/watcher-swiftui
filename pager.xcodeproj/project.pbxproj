@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,11 +21,133 @@
 		0FCCA1EA26105FEF0023FB26 /* LoggedTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCCA1E926105FEF0023FB26 /* LoggedTimeViewModel.swift */; };
 		0FCCA1EE261061850023FB26 /* ProjectTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCCA1ED261061850023FB26 /* ProjectTimeView.swift */; };
 		0FCCA1F1261065850023FB26 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCCA1F0261065850023FB26 /* DayView.swift */; };
-		0FCCA1F5261065AD0023FB26 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCCA1F4261065AD0023FB26 /* Day.swift */; };
+		0FCCA1F5261065AD0023FB26 /* DayLoggedTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCCA1F4261065AD0023FB26 /* DayLoggedTimeViewModel.swift */; };
 		0FCCA1F8261066AF0023FB26 /* LogTimeButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCCA1F7261066AF0023FB26 /* LogTimeButtonStyle.swift */; };
+		3537F76A2660C9070043374C /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537F7692660C9070043374C /* KeychainStorage.swift */; };
+		3537F76F2660D7CF0043374C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537F76E2660D7CF0043374C /* Constants.swift */; };
+		3537F7732660F7A30043374C /* Publisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537F7722660F7A30043374C /* Publisher+Extension.swift */; };
+		3537F77726610B850043374C /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537F77626610B850043374C /* AppViewModel.swift */; };
+		3537F77C26610ECC0043374C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537F77B26610ECC0043374C /* SplashView.swift */; };
+		3545C0DD265F8A2C002BEEFC /* AuthenticationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0DC265F8A2C002BEEFC /* AuthenticationHelper.swift */; };
+		3545C0E2265F8F92002BEEFC /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0E1265F8F92002BEEFC /* ServiceLayer.swift */; };
+		3545C12F265FA9FD002BEEFC /* ApiClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0E7265FA9FD002BEEFC /* ApiClientImpl.swift */; };
+		3545C130265FA9FD002BEEFC /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0E8265FA9FD002BEEFC /* ApiClient.swift */; };
+		3545C131265FA9FD002BEEFC /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0E9265FA9FD002BEEFC /* URLRequestBuilder.swift */; };
+		3545C132265FA9FD002BEEFC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0EA265FA9FD002BEEFC /* HTTPMethod.swift */; };
+		3545C133265FA9FD002BEEFC /* DateFormatter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0EB265FA9FD002BEEFC /* DateFormatter+extension.swift */; };
+		3545C134265FA9FD002BEEFC /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0EC265FA9FD002BEEFC /* APIResponse.swift */; };
+		3545C135265FA9FD002BEEFC /* WatcherDateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0ED265FA9FD002BEEFC /* WatcherDateDecodingStrategy.swift */; };
+		3545C136265FA9FD002BEEFC /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0EE265FA9FD002BEEFC /* SessionDelegate.swift */; };
+		3545C137265FA9FD002BEEFC /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0EF265FA9FD002BEEFC /* Endpoint.swift */; };
+		3545C138265FA9FD002BEEFC /* InstructionsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0F1265FA9FD002BEEFC /* InstructionsEndpoint.swift */; };
+		3545C139265FA9FD002BEEFC /* GoogleCalendarEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0F2265FA9FD002BEEFC /* GoogleCalendarEndpoint.swift */; };
+		3545C13A265FA9FD002BEEFC /* DeleteLoggedTimeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0F3265FA9FD002BEEFC /* DeleteLoggedTimeEndpoint.swift */; };
+		3545C13B265FA9FD002BEEFC /* AddLoggedTimeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0F4265FA9FD002BEEFC /* AddLoggedTimeEndpoint.swift */; };
+		3545C13C265FA9FD002BEEFC /* ProjectReportEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0F5265FA9FD002BEEFC /* ProjectReportEndpoint.swift */; };
+		3545C13D265FA9FD002BEEFC /* GetLoggedTimesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0F6265FA9FD002BEEFC /* GetLoggedTimesEndpoint.swift */; };
+		3545C13E265FA9FD002BEEFC /* MyProjectsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0F7265FA9FD002BEEFC /* MyProjectsEndpoint.swift */; };
+		3545C13F265FA9FD002BEEFC /* ProfileEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0F8265FA9FD002BEEFC /* ProfileEndPoint.swift */; };
+		3545C140265FA9FD002BEEFC /* WaitingForApprovalEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0FA265FA9FD002BEEFC /* WaitingForApprovalEndpoint.swift */; };
+		3545C141265FA9FD002BEEFC /* VerificationLoggedHoursEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0FB265FA9FD002BEEFC /* VerificationLoggedHoursEndpoint.swift */; };
+		3545C142265FA9FD002BEEFC /* ApproveLoggedTimeListEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0FC265FA9FD002BEEFC /* ApproveLoggedTimeListEndpoint.swift */; };
+		3545C143265FA9FD002BEEFC /* RejectLoggedTimeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0FD265FA9FD002BEEFC /* RejectLoggedTimeEndpoint.swift */; };
+		3545C144265FA9FD002BEEFC /* MissingHoursEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0FE265FA9FD002BEEFC /* MissingHoursEndpoint.swift */; };
+		3545C145265FA9FD002BEEFC /* RejectLoggedTimeListEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C0FF265FA9FD002BEEFC /* RejectLoggedTimeListEndpoint.swift */; };
+		3545C146265FA9FD002BEEFC /* ApproveLoggedTimeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C100265FA9FD002BEEFC /* ApproveLoggedTimeEndpoint.swift */; };
+		3545C147265FA9FD002BEEFC /* CalendarEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C101265FA9FD002BEEFC /* CalendarEndpoint.swift */; };
+		3545C148265FA9FD002BEEFC /* EditLoggedTimeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C102265FA9FD002BEEFC /* EditLoggedTimeEndpoint.swift */; };
+		3545C149265FA9FD002BEEFC /* ProjectsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C103265FA9FD002BEEFC /* ProjectsEndpoint.swift */; };
+		3545C14A265FA9FD002BEEFC /* GoogleSignInEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C104265FA9FD002BEEFC /* GoogleSignInEndpoint.swift */; };
+		3545C14B265FA9FD002BEEFC /* UtilizationProjectsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C105265FA9FD002BEEFC /* UtilizationProjectsEndpoint.swift */; };
+		3545C14C265FA9FD002BEEFC /* ChangePasswordEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C107265FA9FD002BEEFC /* ChangePasswordEndpoint.swift */; };
+		3545C14D265FA9FD002BEEFC /* LogoutEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C108265FA9FD002BEEFC /* LogoutEndpoint.swift */; };
+		3545C14E265FA9FD002BEEFC /* SignInEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C109265FA9FD002BEEFC /* SignInEndpoint.swift */; };
+		3545C14F265FA9FD002BEEFC /* SendPasswordResetLinkEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C10A265FA9FD002BEEFC /* SendPasswordResetLinkEndpoint.swift */; };
+		3545C150265FA9FD002BEEFC /* LoggedTimeListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C10C265FA9FD002BEEFC /* LoggedTimeListRequest.swift */; };
+		3545C151265FA9FD002BEEFC /* LogTimeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C10D265FA9FD002BEEFC /* LogTimeRequest.swift */; };
+		3545C152265FA9FD002BEEFC /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C10E265FA9FD002BEEFC /* Manager.swift */; };
+		3545C153265FA9FD002BEEFC /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C10F265FA9FD002BEEFC /* APIError.swift */; };
+		3545C154265FA9FD002BEEFC /* ProjectReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C110265FA9FD002BEEFC /* ProjectReport.swift */; };
+		3545C155265FA9FD002BEEFC /* UtilizationProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C111265FA9FD002BEEFC /* UtilizationProject.swift */; };
+		3545C156265FA9FD002BEEFC /* DailyLoggedTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C112265FA9FD002BEEFC /* DailyLoggedTime.swift */; };
+		3545C157265FA9FD002BEEFC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C113265FA9FD002BEEFC /* Event.swift */; };
+		3545C158265FA9FD002BEEFC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C114265FA9FD002BEEFC /* Comment.swift */; };
+		3545C159265FA9FD002BEEFC /* LoggedTimeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C115265FA9FD002BEEFC /* LoggedTimeStatus.swift */; };
+		3545C15A265FA9FD002BEEFC /* MyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C116265FA9FD002BEEFC /* MyManager.swift */; };
+		3545C15B265FA9FD002BEEFC /* ExternalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C117265FA9FD002BEEFC /* ExternalEvent.swift */; };
+		3545C15C265FA9FD002BEEFC /* EmployeeReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C118265FA9FD002BEEFC /* EmployeeReport.swift */; };
+		3545C15D265FA9FD002BEEFC /* GoogleSigninCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C119265FA9FD002BEEFC /* GoogleSigninCredentials.swift */; };
+		3545C15E265FA9FD002BEEFC /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C11A265FA9FD002BEEFC /* Day.swift */; };
+		3545C15F265FA9FD002BEEFC /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C11B265FA9FD002BEEFC /* UserRole.swift */; };
+		3545C160265FA9FD002BEEFC /* LoggedTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C11C265FA9FD002BEEFC /* LoggedTime.swift */; };
+		3545C161265FA9FD002BEEFC /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C11D265FA9FD002BEEFC /* Instruction.swift */; };
+		3545C162265FA9FD002BEEFC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C11E265FA9FD002BEEFC /* Profile.swift */; };
+		3545C163265FA9FD002BEEFC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C11F265FA9FD002BEEFC /* User.swift */; };
+		3545C164265FA9FD002BEEFC /* AllMissingHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C120265FA9FD002BEEFC /* AllMissingHours.swift */; };
+		3545C165265FA9FD002BEEFC /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C121265FA9FD002BEEFC /* Project.swift */; };
+		3545C166265FA9FD002BEEFC /* CommercialUtilization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C122265FA9FD002BEEFC /* CommercialUtilization.swift */; };
+		3545C167265FA9FD002BEEFC /* MyProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C123265FA9FD002BEEFC /* MyProject.swift */; };
+		3545C168265FA9FD002BEEFC /* VerificationRejectRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C124265FA9FD002BEEFC /* VerificationRejectRequest.swift */; };
+		3545C169265FA9FD002BEEFC /* ExternalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C125265FA9FD002BEEFC /* ExternalService.swift */; };
+		3545C16A265FA9FD002BEEFC /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C126265FA9FD002BEEFC /* ValidationError.swift */; };
+		3545C16B265FA9FD002BEEFC /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C127265FA9FD002BEEFC /* Company.swift */; };
+		3545C16C265FA9FD002BEEFC /* SignInCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C128265FA9FD002BEEFC /* SignInCredentials.swift */; };
+		3545C16D265FA9FD002BEEFC /* MissingHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C129265FA9FD002BEEFC /* MissingHours.swift */; };
+		3545C16E265FA9FD002BEEFC /* EditLoggedTimeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C12A265FA9FD002BEEFC /* EditLoggedTimeRequest.swift */; };
+		3545C16F265FA9FD002BEEFC /* NewPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C12B265FA9FD002BEEFC /* NewPassword.swift */; };
+		3545C170265FA9FD002BEEFC /* ProjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C12C265FA9FD002BEEFC /* ProjectType.swift */; };
+		3545C196265FAA99002BEEFC /* ApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3545C194265FAA99002BEEFC /* ApiClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3545C199265FAA99002BEEFC /* ApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3545C192265FAA99002BEEFC /* ApiClient.framework */; };
+		3545C19A265FAA99002BEEFC /* ApiClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3545C192265FAA99002BEEFC /* ApiClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3545C1A2265FBF4C002BEEFC /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C1A1265FBF4C002BEEFC /* SignInService.swift */; };
+		3545C1AA265FD526002BEEFC /* SignInServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C1A9265FD526002BEEFC /* SignInServiceError.swift */; };
+		35726238265E9C03004E9498 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35726237265E9C03004E9498 /* Line.swift */; };
+		3572623F265ECEB3004E9498 /* HyperlinkedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572623E265ECEB3004E9498 /* HyperlinkedText.swift */; };
+		35BA940F265BD43300463F94 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35BA940D265BD43300463F94 /* GoogleService-Info.plist */; };
+		35BA941C265BD86C00463F94 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA941B265BD86C00463F94 /* SignInView.swift */; };
+		35BA9424265BDEF400463F94 /* GoogleAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA9423265BDEF400463F94 /* GoogleAuthenticator.swift */; };
+		35BA9428265CDA2300463F94 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA9427265CDA2200463F94 /* SignInViewModel.swift */; };
+		35BA942E265CF8A500463F94 /* HostingWindowFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA942D265CF8A500463F94 /* HostingWindowFinder.swift */; };
+		35BA9431265CFADA00463F94 /* WindowObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA9430265CFADA00463F94 /* WindowObserver.swift */; };
+		35BA9439265D17E300463F94 /* SFUIText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35BA9434265D17E300463F94 /* SFUIText-Medium.ttf */; };
+		35BA943A265D17E400463F94 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35BA9435265D17E300463F94 /* SourceSansPro-Regular.ttf */; };
+		35BA943B265D17E400463F94 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35BA9436265D17E300463F94 /* SourceSansPro-Bold.ttf */; };
+		35BA943C265D17E400463F94 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35BA9437265D17E300463F94 /* SFProDisplay-Bold.ttf */; };
+		35BA943D265D17E400463F94 /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35BA9438265D17E300463F94 /* SourceSansPro-SemiBold.ttf */; };
+		35BA9449265D236E00463F94 /* Fonts+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA9448265D236E00463F94 /* Fonts+Extension.swift */; };
+		35BA9450265E21A000463F94 /* GoogleSignInButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA944F265E21A000463F94 /* GoogleSignInButtonStyle.swift */; };
+		35BA9455265E343700463F94 /* AuthTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA9454265E343700463F94 /* AuthTextView.swift */; };
+		35BA9458265E388600463F94 /* EmailFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA9457265E388600463F94 /* EmailFormatter.swift */; };
+		35BA9496265E7D9A00463F94 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA9495265E7D9900463F94 /* PrimaryButton.swift */; };
+		5C44482BE5EA364A9C3D9CFA /* Pods_pager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B50B7598496747FBEFB369C /* Pods_pager.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3545C197265FAA99002BEEFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F145A52260E711B00553E1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3545C191265FAA99002BEEFC;
+			remoteInfo = ApiClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3545C185265FAA62002BEEFC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3545C19A265FAA99002BEEFC /* ApiClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0BEFCCDCFDCBFCBFAD9498E6 /* Pods-pager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pager.release.xcconfig"; path = "Target Support Files/Pods-pager/Pods-pager.release.xcconfig"; sourceTree = "<group>"; };
 		0F145A5A260E711B00553E1E /* pager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F145A5D260E711B00553E1E /* pagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagerApp.swift; sourceTree = "<group>"; };
 		0F145A5F260E711B00553E1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,12 +164,119 @@
 		0FCCA1E926105FEF0023FB26 /* LoggedTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedTimeViewModel.swift; sourceTree = "<group>"; };
 		0FCCA1ED261061850023FB26 /* ProjectTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTimeView.swift; sourceTree = "<group>"; };
 		0FCCA1F0261065850023FB26 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
-		0FCCA1F4261065AD0023FB26 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		0FCCA1F4261065AD0023FB26 /* DayLoggedTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayLoggedTimeViewModel.swift; sourceTree = "<group>"; };
 		0FCCA1F7261066AF0023FB26 /* LogTimeButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTimeButtonStyle.swift; sourceTree = "<group>"; };
+		3537F7692660C9070043374C /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		3537F76E2660D7CF0043374C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3537F7722660F7A30043374C /* Publisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extension.swift"; sourceTree = "<group>"; };
+		3537F77626610B850043374C /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		3537F77B26610ECC0043374C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		3545C0DC265F8A2C002BEEFC /* AuthenticationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHelper.swift; sourceTree = "<group>"; };
+		3545C0E1265F8F92002BEEFC /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
+		3545C0E7265FA9FD002BEEFC /* ApiClientImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClientImpl.swift; sourceTree = "<group>"; };
+		3545C0E8265FA9FD002BEEFC /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		3545C0E9265FA9FD002BEEFC /* URLRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		3545C0EA265FA9FD002BEEFC /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		3545C0EB265FA9FD002BEEFC /* DateFormatter+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+extension.swift"; sourceTree = "<group>"; };
+		3545C0EC265FA9FD002BEEFC /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		3545C0ED265FA9FD002BEEFC /* WatcherDateDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatcherDateDecodingStrategy.swift; sourceTree = "<group>"; };
+		3545C0EE265FA9FD002BEEFC /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		3545C0EF265FA9FD002BEEFC /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		3545C0F1265FA9FD002BEEFC /* InstructionsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsEndpoint.swift; sourceTree = "<group>"; };
+		3545C0F2265FA9FD002BEEFC /* GoogleCalendarEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCalendarEndpoint.swift; sourceTree = "<group>"; };
+		3545C0F3265FA9FD002BEEFC /* DeleteLoggedTimeEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteLoggedTimeEndpoint.swift; sourceTree = "<group>"; };
+		3545C0F4265FA9FD002BEEFC /* AddLoggedTimeEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoggedTimeEndpoint.swift; sourceTree = "<group>"; };
+		3545C0F5265FA9FD002BEEFC /* ProjectReportEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectReportEndpoint.swift; sourceTree = "<group>"; };
+		3545C0F6265FA9FD002BEEFC /* GetLoggedTimesEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLoggedTimesEndpoint.swift; sourceTree = "<group>"; };
+		3545C0F7265FA9FD002BEEFC /* MyProjectsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProjectsEndpoint.swift; sourceTree = "<group>"; };
+		3545C0F8265FA9FD002BEEFC /* ProfileEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEndPoint.swift; sourceTree = "<group>"; };
+		3545C0FA265FA9FD002BEEFC /* WaitingForApprovalEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingForApprovalEndpoint.swift; sourceTree = "<group>"; };
+		3545C0FB265FA9FD002BEEFC /* VerificationLoggedHoursEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationLoggedHoursEndpoint.swift; sourceTree = "<group>"; };
+		3545C0FC265FA9FD002BEEFC /* ApproveLoggedTimeListEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApproveLoggedTimeListEndpoint.swift; sourceTree = "<group>"; };
+		3545C0FD265FA9FD002BEEFC /* RejectLoggedTimeEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RejectLoggedTimeEndpoint.swift; sourceTree = "<group>"; };
+		3545C0FE265FA9FD002BEEFC /* MissingHoursEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissingHoursEndpoint.swift; sourceTree = "<group>"; };
+		3545C0FF265FA9FD002BEEFC /* RejectLoggedTimeListEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RejectLoggedTimeListEndpoint.swift; sourceTree = "<group>"; };
+		3545C100265FA9FD002BEEFC /* ApproveLoggedTimeEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApproveLoggedTimeEndpoint.swift; sourceTree = "<group>"; };
+		3545C101265FA9FD002BEEFC /* CalendarEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEndpoint.swift; sourceTree = "<group>"; };
+		3545C102265FA9FD002BEEFC /* EditLoggedTimeEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditLoggedTimeEndpoint.swift; sourceTree = "<group>"; };
+		3545C103265FA9FD002BEEFC /* ProjectsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsEndpoint.swift; sourceTree = "<group>"; };
+		3545C104265FA9FD002BEEFC /* GoogleSignInEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSignInEndpoint.swift; sourceTree = "<group>"; };
+		3545C105265FA9FD002BEEFC /* UtilizationProjectsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilizationProjectsEndpoint.swift; sourceTree = "<group>"; };
+		3545C107265FA9FD002BEEFC /* ChangePasswordEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordEndpoint.swift; sourceTree = "<group>"; };
+		3545C108265FA9FD002BEEFC /* LogoutEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutEndpoint.swift; sourceTree = "<group>"; };
+		3545C109265FA9FD002BEEFC /* SignInEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInEndpoint.swift; sourceTree = "<group>"; };
+		3545C10A265FA9FD002BEEFC /* SendPasswordResetLinkEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendPasswordResetLinkEndpoint.swift; sourceTree = "<group>"; };
+		3545C10C265FA9FD002BEEFC /* LoggedTimeListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedTimeListRequest.swift; sourceTree = "<group>"; };
+		3545C10D265FA9FD002BEEFC /* LogTimeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTimeRequest.swift; sourceTree = "<group>"; };
+		3545C10E265FA9FD002BEEFC /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		3545C10F265FA9FD002BEEFC /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		3545C110265FA9FD002BEEFC /* ProjectReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectReport.swift; sourceTree = "<group>"; };
+		3545C111265FA9FD002BEEFC /* UtilizationProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilizationProject.swift; sourceTree = "<group>"; };
+		3545C112265FA9FD002BEEFC /* DailyLoggedTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyLoggedTime.swift; sourceTree = "<group>"; };
+		3545C113265FA9FD002BEEFC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		3545C114265FA9FD002BEEFC /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		3545C115265FA9FD002BEEFC /* LoggedTimeStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedTimeStatus.swift; sourceTree = "<group>"; };
+		3545C116265FA9FD002BEEFC /* MyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyManager.swift; sourceTree = "<group>"; };
+		3545C117265FA9FD002BEEFC /* ExternalEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalEvent.swift; sourceTree = "<group>"; };
+		3545C118265FA9FD002BEEFC /* EmployeeReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeReport.swift; sourceTree = "<group>"; };
+		3545C119265FA9FD002BEEFC /* GoogleSigninCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSigninCredentials.swift; sourceTree = "<group>"; };
+		3545C11A265FA9FD002BEEFC /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		3545C11B265FA9FD002BEEFC /* UserRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
+		3545C11C265FA9FD002BEEFC /* LoggedTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedTime.swift; sourceTree = "<group>"; };
+		3545C11D265FA9FD002BEEFC /* Instruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
+		3545C11E265FA9FD002BEEFC /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		3545C11F265FA9FD002BEEFC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3545C120265FA9FD002BEEFC /* AllMissingHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllMissingHours.swift; sourceTree = "<group>"; };
+		3545C121265FA9FD002BEEFC /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		3545C122265FA9FD002BEEFC /* CommercialUtilization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommercialUtilization.swift; sourceTree = "<group>"; };
+		3545C123265FA9FD002BEEFC /* MyProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProject.swift; sourceTree = "<group>"; };
+		3545C124265FA9FD002BEEFC /* VerificationRejectRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationRejectRequest.swift; sourceTree = "<group>"; };
+		3545C125265FA9FD002BEEFC /* ExternalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalService.swift; sourceTree = "<group>"; };
+		3545C126265FA9FD002BEEFC /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		3545C127265FA9FD002BEEFC /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		3545C128265FA9FD002BEEFC /* SignInCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInCredentials.swift; sourceTree = "<group>"; };
+		3545C129265FA9FD002BEEFC /* MissingHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissingHours.swift; sourceTree = "<group>"; };
+		3545C12A265FA9FD002BEEFC /* EditLoggedTimeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditLoggedTimeRequest.swift; sourceTree = "<group>"; };
+		3545C12B265FA9FD002BEEFC /* NewPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPassword.swift; sourceTree = "<group>"; };
+		3545C12C265FA9FD002BEEFC /* ProjectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectType.swift; sourceTree = "<group>"; };
+		3545C192265FAA99002BEEFC /* ApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3545C194265FAA99002BEEFC /* ApiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
+		3545C195265FAA99002BEEFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3545C1A1265FBF4C002BEEFC /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
+		3545C1A9265FD526002BEEFC /* SignInServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInServiceError.swift; sourceTree = "<group>"; };
+		35726237265E9C03004E9498 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		3572623E265ECEB3004E9498 /* HyperlinkedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkedText.swift; sourceTree = "<group>"; };
+		35BA940D265BD43300463F94 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		35BA941B265BD86C00463F94 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		35BA9423265BDEF400463F94 /* GoogleAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthenticator.swift; sourceTree = "<group>"; };
+		35BA9427265CDA2200463F94 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		35BA942D265CF8A500463F94 /* HostingWindowFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingWindowFinder.swift; sourceTree = "<group>"; };
+		35BA9430265CFADA00463F94 /* WindowObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowObserver.swift; sourceTree = "<group>"; };
+		35BA9434265D17E300463F94 /* SFUIText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Medium.ttf"; sourceTree = "<group>"; };
+		35BA9435265D17E300463F94 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
+		35BA9436265D17E300463F94 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
+		35BA9437265D17E300463F94 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		35BA9438265D17E300463F94 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
+		35BA9448265D236E00463F94 /* Fonts+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+Extension.swift"; sourceTree = "<group>"; };
+		35BA944F265E21A000463F94 /* GoogleSignInButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButtonStyle.swift; sourceTree = "<group>"; };
+		35BA9454265E343700463F94 /* AuthTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextView.swift; sourceTree = "<group>"; };
+		35BA9457265E388600463F94 /* EmailFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFormatter.swift; sourceTree = "<group>"; };
+		35BA9495265E7D9900463F94 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		3751729956621357B47F2B3D /* Pods-pager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pager.debug.xcconfig"; path = "Target Support Files/Pods-pager/Pods-pager.debug.xcconfig"; sourceTree = "<group>"; };
+		5B50B7598496747FBEFB369C /* Pods_pager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0F145A57260E711B00553E1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3545C199265FAA99002BEEFC /* ApiClient.framework in Frameworks */,
+				5C44482BE5EA364A9C3D9CFA /* Pods_pager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3545C18F265FAA99002BEEFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,7 +290,10 @@
 			isa = PBXGroup;
 			children = (
 				0F145A5C260E711B00553E1E /* pager */,
+				3545C193265FAA99002BEEFC /* ApiClient */,
 				0F145A5B260E711B00553E1E /* Products */,
+				1250DF13857FEAEF166006F8 /* Pods */,
+				CC1DD331494B822221829B70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				0F145A5A260E711B00553E1E /* pager.app */,
+				3545C192265FAA99002BEEFC /* ApiClient.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +311,7 @@
 			children = (
 				0F145A7326105E2100553E1E /* Sources */,
 				0F145A7226105E1800553E1E /* Resources */,
+				35BA9408265BD41600463F94 /* Supporting Files */,
 				0F145A66260E711B00553E1E /* Info.plist */,
 				0F145A63260E711B00553E1E /* Preview Content */,
 			);
@@ -95,6 +329,8 @@
 		0F145A7126105E1000553E1E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3537F77A26610CC60043374C /* Splash */,
+				35BA941A265BD85200463F94 /* Auth */,
 				0F4C92C12610876E00393CDD /* Common */,
 				0F145A5F260E711B00553E1E /* ContentView.swift */,
 				0F145A6D260E713C00553E1E /* PagerView.swift */,
@@ -111,6 +347,7 @@
 		0F145A7226105E1800553E1E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				35BA9433265D17E300463F94 /* Fonts */,
 				0F145A61260E711B00553E1E /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -119,7 +356,8 @@
 		0F145A7326105E2100553E1E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0F145A5D260E711B00553E1E /* pagerApp.swift */,
+				3537F77526610B6E0043374C /* App */,
+				3545C1A6265FD3A7002BEEFC /* Business Logic */,
 				0FCCA1E826105FE10023FB26 /* Model */,
 				0F145A7126105E1000553E1E /* View */,
 			);
@@ -131,6 +369,12 @@
 			children = (
 				0F4C92C22610877600393CDD /* Color.swift */,
 				0F4C92C62610884100393CDD /* Image.swift */,
+				35BA942D265CF8A500463F94 /* HostingWindowFinder.swift */,
+				35BA9430265CFADA00463F94 /* WindowObserver.swift */,
+				35BA9448265D236E00463F94 /* Fonts+Extension.swift */,
+				35BA9495265E7D9900463F94 /* PrimaryButton.swift */,
+				35726237265E9C03004E9498 /* Line.swift */,
+				3572623E265ECEB3004E9498 /* HyperlinkedText.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -138,32 +382,318 @@
 		0FCCA1E826105FE10023FB26 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3545C1A8265FD512002BEEFC /* Error */,
 				0FCCA1E926105FEF0023FB26 /* LoggedTimeViewModel.swift */,
-				0FCCA1F4261065AD0023FB26 /* Day.swift */,
+				0FCCA1F4261065AD0023FB26 /* DayLoggedTimeViewModel.swift */,
 				0F1C1CAF2610C3740057262B /* WeekProgress.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1250DF13857FEAEF166006F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3751729956621357B47F2B3D /* Pods-pager.debug.xcconfig */,
+				0BEFCCDCFDCBFCBFAD9498E6 /* Pods-pager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3537F7682660C8F40043374C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				3537F7692660C9070043374C /* KeychainStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		3537F76D2660D7C50043374C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3537F76E2660D7CF0043374C /* Constants.swift */,
+				3537F7722660F7A30043374C /* Publisher+Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3537F77526610B6E0043374C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0F145A5D260E711B00553E1E /* pagerApp.swift */,
+				3537F77626610B850043374C /* AppViewModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3537F77A26610CC60043374C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3537F77B26610ECC0043374C /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		3545C0DB265F8A15002BEEFC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3545C0E1265F8F92002BEEFC /* ServiceLayer.swift */,
+				3545C1A1265FBF4C002BEEFC /* SignInService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3545C0E5265FA9FD002BEEFC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3545C0E6265FA9FD002BEEFC /* Common */,
+				3545C0F0265FA9FD002BEEFC /* Endpoint */,
+				3545C10B265FA9FD002BEEFC /* Model */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3545C0E6265FA9FD002BEEFC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3545C0E7265FA9FD002BEEFC /* ApiClientImpl.swift */,
+				3545C0E8265FA9FD002BEEFC /* ApiClient.swift */,
+				3545C0E9265FA9FD002BEEFC /* URLRequestBuilder.swift */,
+				3545C0EA265FA9FD002BEEFC /* HTTPMethod.swift */,
+				3545C0EB265FA9FD002BEEFC /* DateFormatter+extension.swift */,
+				3545C0EC265FA9FD002BEEFC /* APIResponse.swift */,
+				3545C0ED265FA9FD002BEEFC /* WatcherDateDecodingStrategy.swift */,
+				3545C0EE265FA9FD002BEEFC /* SessionDelegate.swift */,
+				3545C0EF265FA9FD002BEEFC /* Endpoint.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3545C0F0265FA9FD002BEEFC /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				3545C0F1265FA9FD002BEEFC /* InstructionsEndpoint.swift */,
+				3545C0F2265FA9FD002BEEFC /* GoogleCalendarEndpoint.swift */,
+				3545C0F3265FA9FD002BEEFC /* DeleteLoggedTimeEndpoint.swift */,
+				3545C0F4265FA9FD002BEEFC /* AddLoggedTimeEndpoint.swift */,
+				3545C0F5265FA9FD002BEEFC /* ProjectReportEndpoint.swift */,
+				3545C0F6265FA9FD002BEEFC /* GetLoggedTimesEndpoint.swift */,
+				3545C0F7265FA9FD002BEEFC /* MyProjectsEndpoint.swift */,
+				3545C0F8265FA9FD002BEEFC /* ProfileEndPoint.swift */,
+				3545C0F9265FA9FD002BEEFC /* Verification */,
+				3545C101265FA9FD002BEEFC /* CalendarEndpoint.swift */,
+				3545C102265FA9FD002BEEFC /* EditLoggedTimeEndpoint.swift */,
+				3545C103265FA9FD002BEEFC /* ProjectsEndpoint.swift */,
+				3545C104265FA9FD002BEEFC /* GoogleSignInEndpoint.swift */,
+				3545C105265FA9FD002BEEFC /* UtilizationProjectsEndpoint.swift */,
+				3545C106265FA9FD002BEEFC /* Authentication */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		3545C0F9265FA9FD002BEEFC /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				3545C0FA265FA9FD002BEEFC /* WaitingForApprovalEndpoint.swift */,
+				3545C0FB265FA9FD002BEEFC /* VerificationLoggedHoursEndpoint.swift */,
+				3545C0FC265FA9FD002BEEFC /* ApproveLoggedTimeListEndpoint.swift */,
+				3545C0FD265FA9FD002BEEFC /* RejectLoggedTimeEndpoint.swift */,
+				3545C0FE265FA9FD002BEEFC /* MissingHoursEndpoint.swift */,
+				3545C0FF265FA9FD002BEEFC /* RejectLoggedTimeListEndpoint.swift */,
+				3545C100265FA9FD002BEEFC /* ApproveLoggedTimeEndpoint.swift */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		3545C106265FA9FD002BEEFC /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				3545C107265FA9FD002BEEFC /* ChangePasswordEndpoint.swift */,
+				3545C108265FA9FD002BEEFC /* LogoutEndpoint.swift */,
+				3545C109265FA9FD002BEEFC /* SignInEndpoint.swift */,
+				3545C10A265FA9FD002BEEFC /* SendPasswordResetLinkEndpoint.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		3545C10B265FA9FD002BEEFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3545C10C265FA9FD002BEEFC /* LoggedTimeListRequest.swift */,
+				3545C10D265FA9FD002BEEFC /* LogTimeRequest.swift */,
+				3545C10E265FA9FD002BEEFC /* Manager.swift */,
+				3545C10F265FA9FD002BEEFC /* APIError.swift */,
+				3545C110265FA9FD002BEEFC /* ProjectReport.swift */,
+				3545C111265FA9FD002BEEFC /* UtilizationProject.swift */,
+				3545C112265FA9FD002BEEFC /* DailyLoggedTime.swift */,
+				3545C113265FA9FD002BEEFC /* Event.swift */,
+				3545C114265FA9FD002BEEFC /* Comment.swift */,
+				3545C115265FA9FD002BEEFC /* LoggedTimeStatus.swift */,
+				3545C116265FA9FD002BEEFC /* MyManager.swift */,
+				3545C117265FA9FD002BEEFC /* ExternalEvent.swift */,
+				3545C118265FA9FD002BEEFC /* EmployeeReport.swift */,
+				3545C119265FA9FD002BEEFC /* GoogleSigninCredentials.swift */,
+				3545C11A265FA9FD002BEEFC /* Day.swift */,
+				3545C11B265FA9FD002BEEFC /* UserRole.swift */,
+				3545C11C265FA9FD002BEEFC /* LoggedTime.swift */,
+				3545C11D265FA9FD002BEEFC /* Instruction.swift */,
+				3545C11E265FA9FD002BEEFC /* Profile.swift */,
+				3545C11F265FA9FD002BEEFC /* User.swift */,
+				3545C120265FA9FD002BEEFC /* AllMissingHours.swift */,
+				3545C121265FA9FD002BEEFC /* Project.swift */,
+				3545C122265FA9FD002BEEFC /* CommercialUtilization.swift */,
+				3545C123265FA9FD002BEEFC /* MyProject.swift */,
+				3545C124265FA9FD002BEEFC /* VerificationRejectRequest.swift */,
+				3545C125265FA9FD002BEEFC /* ExternalService.swift */,
+				3545C126265FA9FD002BEEFC /* ValidationError.swift */,
+				3545C127265FA9FD002BEEFC /* Company.swift */,
+				3545C128265FA9FD002BEEFC /* SignInCredentials.swift */,
+				3545C129265FA9FD002BEEFC /* MissingHours.swift */,
+				3545C12A265FA9FD002BEEFC /* EditLoggedTimeRequest.swift */,
+				3545C12B265FA9FD002BEEFC /* NewPassword.swift */,
+				3545C12C265FA9FD002BEEFC /* ProjectType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3545C193265FAA99002BEEFC /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				3545C0E5265FA9FD002BEEFC /* Classes */,
+				3545C194265FAA99002BEEFC /* ApiClient.h */,
+				3545C195265FAA99002BEEFC /* Info.plist */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		3545C1A6265FD3A7002BEEFC /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+				3537F76D2660D7C50043374C /* Common */,
+				3537F7682660C8F40043374C /* Storage */,
+				35BA9422265BDEAA00463F94 /* Helper */,
+				3545C0DB265F8A15002BEEFC /* Service */,
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+		3545C1A8265FD512002BEEFC /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				3545C1A9265FD526002BEEFC /* SignInServiceError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		35BA9408265BD41600463F94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35BA9409265BD43300463F94 /* GoogleService */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35BA9409265BD43300463F94 /* GoogleService */ = {
+			isa = PBXGroup;
+			children = (
+				35BA940D265BD43300463F94 /* GoogleService-Info.plist */,
+			);
+			path = GoogleService;
+			sourceTree = "<group>";
+		};
+		35BA941A265BD85200463F94 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				35BA941B265BD86C00463F94 /* SignInView.swift */,
+				35BA9427265CDA2200463F94 /* SignInViewModel.swift */,
+				35BA944F265E21A000463F94 /* GoogleSignInButtonStyle.swift */,
+				35BA9454265E343700463F94 /* AuthTextView.swift */,
+				35BA9457265E388600463F94 /* EmailFormatter.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		35BA9422265BDEAA00463F94 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3545C0DC265F8A2C002BEEFC /* AuthenticationHelper.swift */,
+				35BA9423265BDEF400463F94 /* GoogleAuthenticator.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		35BA9433265D17E300463F94 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				35BA9434265D17E300463F94 /* SFUIText-Medium.ttf */,
+				35BA9435265D17E300463F94 /* SourceSansPro-Regular.ttf */,
+				35BA9436265D17E300463F94 /* SourceSansPro-Bold.ttf */,
+				35BA9437265D17E300463F94 /* SFProDisplay-Bold.ttf */,
+				35BA9438265D17E300463F94 /* SourceSansPro-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CC1DD331494B822221829B70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B50B7598496747FBEFB369C /* Pods_pager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3545C18D265FAA99002BEEFC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3545C196265FAA99002BEEFC /* ApiClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0F145A59260E711B00553E1E /* pager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F145A69260E711B00553E1E /* Build configuration list for PBXNativeTarget "pager" */;
 			buildPhases = (
+				EEC2165D49AC7E39666210D5 /* [CP] Check Pods Manifest.lock */,
 				0F145A56260E711B00553E1E /* Sources */,
 				0F145A57260E711B00553E1E /* Frameworks */,
 				0F145A58260E711B00553E1E /* Resources */,
+				A9D5270905C5EF17323048EE /* [CP] Embed Pods Frameworks */,
+				42143A9849276BCF7FE6FC64 /* [CP] Copy Pods Resources */,
+				3545C185265FAA62002BEEFC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3545C198265FAA99002BEEFC /* PBXTargetDependency */,
 			);
 			name = pager;
 			productName = pager;
 			productReference = 0F145A5A260E711B00553E1E /* pager.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3545C191265FAA99002BEEFC /* ApiClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3545C19B265FAA99002BEEFC /* Build configuration list for PBXNativeTarget "ApiClient" */;
+			buildPhases = (
+				3545C18D265FAA99002BEEFC /* Headers */,
+				3545C18E265FAA99002BEEFC /* Sources */,
+				3545C18F265FAA99002BEEFC /* Frameworks */,
+				3545C190265FAA99002BEEFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApiClient;
+			productName = ApiClient;
+			productReference = 3545C192265FAA99002BEEFC /* ApiClient.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -176,6 +706,9 @@
 				TargetAttributes = {
 					0F145A59260E711B00553E1E = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					3545C191265FAA99002BEEFC = {
+						CreatedOnToolsVersion = 12.3;
 					};
 				};
 			};
@@ -193,6 +726,7 @@
 			projectRoot = "";
 			targets = (
 				0F145A59260E711B00553E1E /* pager */,
+				3545C191265FAA99002BEEFC /* ApiClient */,
 			);
 		};
 /* End PBXProject section */
@@ -202,36 +736,210 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35BA943A265D17E400463F94 /* SourceSansPro-Regular.ttf in Resources */,
+				35BA943D265D17E400463F94 /* SourceSansPro-SemiBold.ttf in Resources */,
 				0F145A65260E711B00553E1E /* Preview Assets.xcassets in Resources */,
+				35BA9439265D17E300463F94 /* SFUIText-Medium.ttf in Resources */,
+				35BA940F265BD43300463F94 /* GoogleService-Info.plist in Resources */,
+				35BA943C265D17E400463F94 /* SFProDisplay-Bold.ttf in Resources */,
 				0F145A62260E711B00553E1E /* Assets.xcassets in Resources */,
+				35BA943B265D17E400463F94 /* SourceSansPro-Bold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3545C190265FAA99002BEEFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42143A9849276BCF7FE6FC64 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pager/Pods-pager-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pager/Pods-pager-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pager/Pods-pager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9D5270905C5EF17323048EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pager/Pods-pager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pager/Pods-pager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pager/Pods-pager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEC2165D49AC7E39666210D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F145A56260E711B00553E1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FCCA1F5261065AD0023FB26 /* Day.swift in Sources */,
+				3545C143265FA9FD002BEEFC /* RejectLoggedTimeEndpoint.swift in Sources */,
+				0FCCA1F5261065AD0023FB26 /* DayLoggedTimeViewModel.swift in Sources */,
+				3545C142265FA9FD002BEEFC /* ApproveLoggedTimeListEndpoint.swift in Sources */,
+				3545C14D265FA9FD002BEEFC /* LogoutEndpoint.swift in Sources */,
+				3545C167265FA9FD002BEEFC /* MyProject.swift in Sources */,
+				3545C156265FA9FD002BEEFC /* DailyLoggedTime.swift in Sources */,
+				3545C13D265FA9FD002BEEFC /* GetLoggedTimesEndpoint.swift in Sources */,
+				3545C154265FA9FD002BEEFC /* ProjectReport.swift in Sources */,
+				3545C141265FA9FD002BEEFC /* VerificationLoggedHoursEndpoint.swift in Sources */,
+				3545C170265FA9FD002BEEFC /* ProjectType.swift in Sources */,
+				35BA9455265E343700463F94 /* AuthTextView.swift in Sources */,
 				0FCCA1EE261061850023FB26 /* ProjectTimeView.swift in Sources */,
+				3545C140265FA9FD002BEEFC /* WaitingForApprovalEndpoint.swift in Sources */,
+				3545C13E265FA9FD002BEEFC /* MyProjectsEndpoint.swift in Sources */,
+				3545C136265FA9FD002BEEFC /* SessionDelegate.swift in Sources */,
+				3545C13F265FA9FD002BEEFC /* ProfileEndPoint.swift in Sources */,
 				0FCCA1F1261065850023FB26 /* DayView.swift in Sources */,
+				3545C155265FA9FD002BEEFC /* UtilizationProject.swift in Sources */,
+				3537F77C26610ECC0043374C /* SplashView.swift in Sources */,
+				35726238265E9C03004E9498 /* Line.swift in Sources */,
+				3545C151265FA9FD002BEEFC /* LogTimeRequest.swift in Sources */,
+				3545C14C265FA9FD002BEEFC /* ChangePasswordEndpoint.swift in Sources */,
+				3545C13A265FA9FD002BEEFC /* DeleteLoggedTimeEndpoint.swift in Sources */,
+				3545C1AA265FD526002BEEFC /* SignInServiceError.swift in Sources */,
+				3545C16D265FA9FD002BEEFC /* MissingHours.swift in Sources */,
+				3545C134265FA9FD002BEEFC /* APIResponse.swift in Sources */,
+				3537F7732660F7A30043374C /* Publisher+Extension.swift in Sources */,
+				3545C14B265FA9FD002BEEFC /* UtilizationProjectsEndpoint.swift in Sources */,
+				3545C138265FA9FD002BEEFC /* InstructionsEndpoint.swift in Sources */,
+				3545C16F265FA9FD002BEEFC /* NewPassword.swift in Sources */,
 				0FCCA1F8261066AF0023FB26 /* LogTimeButtonStyle.swift in Sources */,
+				3545C12F265FA9FD002BEEFC /* ApiClientImpl.swift in Sources */,
+				35BA9428265CDA2300463F94 /* SignInViewModel.swift in Sources */,
+				3545C14A265FA9FD002BEEFC /* GoogleSignInEndpoint.swift in Sources */,
+				3545C169265FA9FD002BEEFC /* ExternalService.swift in Sources */,
+				3545C16A265FA9FD002BEEFC /* ValidationError.swift in Sources */,
+				3545C144265FA9FD002BEEFC /* MissingHoursEndpoint.swift in Sources */,
+				3545C1A2265FBF4C002BEEFC /* SignInService.swift in Sources */,
+				3545C14E265FA9FD002BEEFC /* SignInEndpoint.swift in Sources */,
+				35BA9496265E7D9A00463F94 /* PrimaryButton.swift in Sources */,
+				3545C15D265FA9FD002BEEFC /* GoogleSigninCredentials.swift in Sources */,
 				0F145A60260E711B00553E1E /* ContentView.swift in Sources */,
+				3545C157265FA9FD002BEEFC /* Event.swift in Sources */,
+				35BA9424265BDEF400463F94 /* GoogleAuthenticator.swift in Sources */,
+				3545C15E265FA9FD002BEEFC /* Day.swift in Sources */,
+				35BA942E265CF8A500463F94 /* HostingWindowFinder.swift in Sources */,
+				3545C132265FA9FD002BEEFC /* HTTPMethod.swift in Sources */,
+				3545C146265FA9FD002BEEFC /* ApproveLoggedTimeEndpoint.swift in Sources */,
+				3545C161265FA9FD002BEEFC /* Instruction.swift in Sources */,
+				35BA9458265E388600463F94 /* EmailFormatter.swift in Sources */,
+				3545C0DD265F8A2C002BEEFC /* AuthenticationHelper.swift in Sources */,
+				3537F77726610B850043374C /* AppViewModel.swift in Sources */,
+				3545C162265FA9FD002BEEFC /* Profile.swift in Sources */,
+				3572623F265ECEB3004E9498 /* HyperlinkedText.swift in Sources */,
+				3545C152265FA9FD002BEEFC /* Manager.swift in Sources */,
 				0F145A6E260E713C00553E1E /* PagerView.swift in Sources */,
+				3545C137265FA9FD002BEEFC /* Endpoint.swift in Sources */,
+				3545C16B265FA9FD002BEEFC /* Company.swift in Sources */,
+				3545C153265FA9FD002BEEFC /* APIError.swift in Sources */,
+				3545C159265FA9FD002BEEFC /* LoggedTimeStatus.swift in Sources */,
 				0F1C1CB02610C3740057262B /* WeekProgress.swift in Sources */,
+				3545C149265FA9FD002BEEFC /* ProjectsEndpoint.swift in Sources */,
+				3545C168265FA9FD002BEEFC /* VerificationRejectRequest.swift in Sources */,
+				3545C158265FA9FD002BEEFC /* Comment.swift in Sources */,
+				35BA9431265CFADA00463F94 /* WindowObserver.swift in Sources */,
+				3537F76A2660C9070043374C /* KeychainStorage.swift in Sources */,
 				0FCCA1EA26105FEF0023FB26 /* LoggedTimeViewModel.swift in Sources */,
 				0F145A5E260E711B00553E1E /* pagerApp.swift in Sources */,
+				3545C165265FA9FD002BEEFC /* Project.swift in Sources */,
+				3545C13C265FA9FD002BEEFC /* ProjectReportEndpoint.swift in Sources */,
+				3545C139265FA9FD002BEEFC /* GoogleCalendarEndpoint.swift in Sources */,
+				35BA941C265BD86C00463F94 /* SignInView.swift in Sources */,
+				3545C135265FA9FD002BEEFC /* WatcherDateDecodingStrategy.swift in Sources */,
+				3545C16C265FA9FD002BEEFC /* SignInCredentials.swift in Sources */,
 				0F4C92EC2610C16100393CDD /* WeekProgressView.swift in Sources */,
+				3545C163265FA9FD002BEEFC /* User.swift in Sources */,
+				3545C150265FA9FD002BEEFC /* LoggedTimeListRequest.swift in Sources */,
+				35BA9450265E21A000463F94 /* GoogleSignInButtonStyle.swift in Sources */,
 				0F4C92C32610877600393CDD /* Color.swift in Sources */,
+				3545C131265FA9FD002BEEFC /* URLRequestBuilder.swift in Sources */,
+				3545C15A265FA9FD002BEEFC /* MyManager.swift in Sources */,
+				3545C13B265FA9FD002BEEFC /* AddLoggedTimeEndpoint.swift in Sources */,
+				3545C15C265FA9FD002BEEFC /* EmployeeReport.swift in Sources */,
+				3545C160265FA9FD002BEEFC /* LoggedTime.swift in Sources */,
 				0F78495F26125227006CF4F3 /* LoggedTimeView.swift in Sources */,
+				3545C166265FA9FD002BEEFC /* CommercialUtilization.swift in Sources */,
+				3545C16E265FA9FD002BEEFC /* EditLoggedTimeRequest.swift in Sources */,
+				3545C145265FA9FD002BEEFC /* RejectLoggedTimeListEndpoint.swift in Sources */,
+				3545C15B265FA9FD002BEEFC /* ExternalEvent.swift in Sources */,
 				0F1C1CB32610C4400057262B /* WeekChooserView.swift in Sources */,
+				3545C148265FA9FD002BEEFC /* EditLoggedTimeEndpoint.swift in Sources */,
+				3545C133265FA9FD002BEEFC /* DateFormatter+extension.swift in Sources */,
+				3545C164265FA9FD002BEEFC /* AllMissingHours.swift in Sources */,
+				3545C14F265FA9FD002BEEFC /* SendPasswordResetLinkEndpoint.swift in Sources */,
+				3545C15F265FA9FD002BEEFC /* UserRole.swift in Sources */,
+				3545C147265FA9FD002BEEFC /* CalendarEndpoint.swift in Sources */,
 				0F4C92C72610884100393CDD /* Image.swift in Sources */,
+				35BA9449265D236E00463F94 /* Fonts+Extension.swift in Sources */,
+				3537F76F2660D7CF0043374C /* Constants.swift in Sources */,
+				3545C0E2265F8F92002BEEFC /* ServiceLayer.swift in Sources */,
+				3545C130265FA9FD002BEEFC /* ApiClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3545C18E265FAA99002BEEFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3545C198265FAA99002BEEFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3545C191265FAA99002BEEFC /* ApiClient */;
+			targetProxy = 3545C197265FAA99002BEEFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0F145A67260E711B00553E1E /* Debug */ = {
@@ -352,12 +1060,13 @@
 		};
 		0F145A6A260E711B00553E1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3751729956621357B47F2B3D /* Pods-pager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"pager/Preview Content\"";
-				DEVELOPMENT_TEAM = 2VL6F59R75;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = pager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -374,12 +1083,13 @@
 		};
 		0F145A6B260E711B00553E1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BEFCCDCFDCBFCBFAD9498E6 /* Pods-pager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"pager/Preview Content\"";
-				DEVELOPMENT_TEAM = 2VL6F59R75;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = pager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -391,6 +1101,62 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3545C19C265FAA99002BEEFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ApiClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redmadrobot.ApiClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3545C19D265FAA99002BEEFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ApiClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redmadrobot.ApiClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -411,6 +1177,15 @@
 			buildConfigurations = (
 				0F145A6A260E711B00553E1E /* Debug */,
 				0F145A6B260E711B00553E1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3545C19B265FAA99002BEEFC /* Build configuration list for PBXNativeTarget "ApiClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3545C19C265FAA99002BEEFC /* Debug */,
+				3545C19D265FAA99002BEEFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
